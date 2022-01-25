@@ -1,4 +1,6 @@
-﻿namespace ProjetoPet
+﻿using System;
+
+namespace ProjetoPet
 {
     public class Tutor
     {
@@ -7,6 +9,10 @@
 
         // 
         public string Sobrenome;
+        public DateTime DataDeNascimento;
+        public string Sexo;
+        public string CEP;
+        public int NumeroDaCasa;
 
         // Id OK
         // Nome OK

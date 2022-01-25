@@ -16,6 +16,10 @@ namespace ProjetoPet
             primeiroTutor.Id = 1;
             primeiroTutor.Nome = "Giovanna";
             primeiroTutor.Sobrenome = "Marques";
+            primeiroTutor.DataDeNascimento = new DateTime(1999,10,12);
+            primeiroTutor.Sexo = "Feminino";
+            primeiroTutor.CEP = "04750-120";
+            primeiroTutor.NumeroDaCasa = 123;
 
 
             // Aqui nós estamos reservando um novo espaço na memória Heap para um novo Objeto do tipo "Tutor" 
@@ -28,6 +32,11 @@ namespace ProjetoPet
             segundoTutor.Id = 2;
             segundoTutor.Nome = "Matheus";
             segundoTutor.Sobrenome = "Campanini";
+            segundoTutor.DataDeNascimento = new DateTime(1995,06,08);
+            segundoTutor.Sexo = "Masculino";
+            segundoTutor.CEP = "08940-090";
+            segundoTutor.NumeroDaCasa = 70;
+
         }
     }
 }
