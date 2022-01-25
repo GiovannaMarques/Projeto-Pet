@@ -18,7 +18,6 @@ namespace ProjetoPet
             primeiroTutor.Sobrenome = "Marques";
 
 
-
             // Aqui nós estamos reservando um novo espaço na memória Heap para um novo Objeto do tipo "Tutor" 
             // Este novo objeto é independente do primeiro que foi criado na linha 13!!
             // Nós criamos uma variável chamada "segundoTutor" que irá apontar para o novo Objeto criado
