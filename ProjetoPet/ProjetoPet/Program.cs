@@ -37,6 +37,15 @@ namespace ProjetoPet
             segundoTutor.CEP = "08940-090";
             segundoTutor.NumeroDaCasa = 70;
 
+            Pet pet = new Pet();
+
+            pet.IdPet = 1;
+            pet.NomePet = "Mel";
+            pet.DataDeNascimentoPet = new DateTime(2010,04,01);
+            pet.Especie = "Yorkshire";
+            pet.IdTutor = 1;
+
+
         }
     }
 }
