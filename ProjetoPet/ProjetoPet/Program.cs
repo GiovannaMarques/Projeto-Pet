@@ -31,6 +31,16 @@ namespace ProjetoPet
             string numeroDaCasa = Console.ReadLine();
             int numeroDaCasaInt = Convert.ToInt32(numeroDaCasa);
 
+            Tutor tutor = new Tutor();
+            tutor.Nome = nomeTutor;
+            tutor.Sobrenome = sobrenomeTutor;
+            tutor.DataDeNascimento = dataNascimentoTutorDateTime;
+            tutor.Sexo = sexoTutor;
+            tutor.CEP = cepTutor;
+            tutor.NumeroDaCasa = numeroDaCasaInt;
+
+            
+
             Console.ReadLine();
 
 
