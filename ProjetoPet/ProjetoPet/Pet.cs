@@ -6,9 +6,9 @@ namespace ProjetoPet
     {
         // colocar propriedades Pet
 
-        public int IdPet;
-        public string NomePet;
-        public DateTime DataDeNascimentoPet;
+        public int Id;
+        public string Nome;
+        public DateTime DataDeNascimento;
         public string Especie;
         public int IdTutor;
 

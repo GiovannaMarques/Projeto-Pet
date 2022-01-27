@@ -22,10 +22,14 @@ namespace ProjetoPet
             DateTime dataNascimentoTutorDateTime = Convert.ToDateTime(dataNascimentoTutorString); 
 
             Console.WriteLine("Digite o sexo do tutor: ");
+            string sexoTutor = Console.ReadLine();
 
             Console.WriteLine("Digite o CEP do tutor:");
+            string cepTutor = Console.ReadLine();
 
             Console.WriteLine("Digite o número da casa do tutor: ");
+            string numeroDaCasa = Console.ReadLine();
+            int numeroDaCasaInt = Convert.ToInt32(numeroDaCasa);
 
             Console.ReadLine();
 
@@ -65,9 +69,9 @@ namespace ProjetoPet
 
             Pet pet = new Pet();
 
-            pet.IdPet = 1;
-            pet.NomePet = "Mel";
-            pet.DataDeNascimentoPet = new DateTime(2010,04,01);
+            pet.Id = 1;
+            pet.Nome = "Mel";
+            pet.DataDeNascimento = new DateTime(2010,04,01);
             pet.Especie = "Yorkshire";
             pet.IdTutor = 1;
 
