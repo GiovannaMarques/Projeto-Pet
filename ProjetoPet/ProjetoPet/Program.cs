@@ -6,6 +6,32 @@ namespace ProjetoPet
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Bem vindo à plataforma");
+
+            // Capturar os dados do tutor e criar o objeto tutor 
+            Console.WriteLine("Preencha os dados do tutor no formulário");
+
+            Console.WriteLine("Digite o nome do tutor: ");
+            string nomeTutor = Console.ReadLine();
+
+            Console.WriteLine("Digite o sobrenome do tutor: ");
+            string sobrenomeTutor = Console.ReadLine();
+
+            Console.WriteLine("Digite a data de nascimento do tutor: ");
+            string dataNascimentoTutorString = Console.ReadLine();
+            DateTime dataNascimentoTutorDateTime = Convert.ToDateTime(dataNascimentoTutorString); 
+
+            Console.WriteLine("Digite o sexo do tutor: ");
+
+            Console.WriteLine("Digite o CEP do tutor:");
+
+            Console.WriteLine("Digite o número da casa do tutor: ");
+
+            Console.ReadLine();
+
+
+
+
             // Armazena um espaço na memória Heap para um novo Objeto do tipo "Tutor" e aponta para variável "primeiroTutor" para este novo espaço de memória
             // O valor padrão do tipo de dado "int" no C# é "zero"
             // O valor padrão do tipo de dado "string no C# é "null
