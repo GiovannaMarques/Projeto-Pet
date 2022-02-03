@@ -10,49 +10,8 @@ namespace ProjetoPet
 
             FluxoCriarTutor();
 
-            #region exemplos tutores pet
-
-            // Armazena um espaço na memória Heap para um novo Objeto do tipo "Tutor" e aponta para variável "primeiroTutor" para este novo espaço de memória
-            // O valor padrão do tipo de dado "int" no C# é "zero"
-            // O valor padrão do tipo de dado "string no C# é "null
-            // Por isso, inicialmente, Id = 0, Nome = null, Sobrenome = null
-            Tutor primeiroTutor = new Tutor();
-
-            // A atribuição dos valores desejados para as propriedade acontece nas três linhas a seguir
-            primeiroTutor.Id = 1;
-            primeiroTutor.Nome = "Giovanna";
-            primeiroTutor.Sobrenome = "Marques";
-            primeiroTutor.DataDeNascimento = new DateTime(1999, 10, 12);
-            primeiroTutor.Sexo = "Feminino";
-            primeiroTutor.CEP = "04750-120";
-            primeiroTutor.NumeroDaCasa = 123;
-
-
-            // Aqui nós estamos reservando um novo espaço na memória Heap para um novo Objeto do tipo "Tutor" 
-            // Este novo objeto é independente do primeiro que foi criado na linha 13!!
-            // Nós criamos uma variável chamada "segundoTutor" que irá apontar para o novo Objeto criado
-            // Inicialmente os valores das propriedades deste objeto são Id = 0, Nome = null, Sobrenome = null
-            Tutor segundoTutor = new Tutor();
-
-            // A atribuição dos valores desejados para as propriedade acontece nas três linhas a seguir
-            segundoTutor.Id = 2;
-            segundoTutor.Nome = "Matheus";
-            segundoTutor.Sobrenome = "Campanini";
-            segundoTutor.DataDeNascimento = new DateTime(1995, 06, 08);
-            segundoTutor.Sexo = "Masculino";
-            segundoTutor.CEP = "08940-090";
-            segundoTutor.NumeroDaCasa = 70;
-
-            Pet pet = new Pet();
-
-            pet.Id = 1;
-            pet.Nome = "Mel";
-            pet.DataDeNascimento = new DateTime(2010, 04, 01);
-            pet.Especie = "Yorkshire";
-            pet.IdTutor = 1;
-
-            #endregion
-
+            FluxoCriarPet();
+            
         }
 
         static void FluxoCriarTutor()
@@ -88,12 +47,39 @@ namespace ProjetoPet
             tutor.CEP = cepTutor;
             tutor.NumeroDaCasa = numeroDaCasaInt;
 
-            
+            //
 
             Console.ReadLine();
 
         }
 
+        //Id (ex: 1800)
+        //Nome(ex: Meg)
+        //Data de nascimento(ex: 15/08/2016)
+        //Espécie(ex: Cão)
+        //IdTutor(ex: 1555)
+
+        static void FluxoCriarPet()
+        {
+            Console.WriteLine("Digite o nome do Pet");
+            string nome = Console.ReadLine();
+
+            Console.WriteLine("Digite a data de nascimento do pet");
+            string datadeNascimento = Console.ReadLine();
+            DateTime datadeNascimentodDataTime = Convert.ToDateTime(datadeNascimento);
+
+            Console.WriteLine("Digite a espécie");
+            string especie = Console.ReadLine();
+
+            Pet pet = new Pet();
+            pet.Nome = nome;
+            pet.DataDeNascimento = datadeNascimentodDataTime;
+            pet.Especie = especie;
+
+            Console.ReadLine();
+
+
+        }
 
     }
 }
