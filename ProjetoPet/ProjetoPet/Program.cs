@@ -8,13 +8,13 @@ namespace ProjetoPet
         {
             Console.WriteLine("Bem vindo à plataforma");
 
-            FluxoCriarTutor();
+            Tutor tutorCriado = FluxoCriarTutor();
 
-            FluxoCriarPet();
+            FluxoCriarPet(tutorCriado.Id);
             
         }
-
-        static void FluxoCriarTutor()
+        // estudar essa parte
+        static Tutor FluxoCriarTutor()
         {
             // Capturar os dados do tutor e criar o objeto tutor 
             Console.WriteLine("Preencha os dados do tutor no formulário");
@@ -47,19 +47,18 @@ namespace ProjetoPet
             tutor.CEP = cepTutor;
             tutor.NumeroDaCasa = numeroDaCasaInt;
 
-            //
-
-            Console.ReadLine();
-
+            //estudaaar
+            return tutor;
         }
 
-        //Id (ex: 1800)
+        //Id (ex: 1800) 
         //Nome(ex: Meg)
         //Data de nascimento(ex: 15/08/2016)
         //Espécie(ex: Cão)
         //IdTutor(ex: 1555)
 
-        static void FluxoCriarPet()
+        // estudaaaar
+        static void FluxoCriarPet(Guid tutorID)
         {
             Console.WriteLine("Digite o nome do Pet");
             string nome = Console.ReadLine();
@@ -75,6 +74,8 @@ namespace ProjetoPet
             pet.Nome = nome;
             pet.DataDeNascimento = datadeNascimentodDataTime;
             pet.Especie = especie;
+            pet.IdTutor = tutorID;
+           
 
             Console.ReadLine();
 

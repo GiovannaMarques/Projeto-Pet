@@ -5,12 +5,11 @@ namespace ProjetoPet
     public class Pet
     {
         // colocar propriedades Pet
-
-        public int Id;
+        public Guid Id = Guid.NewGuid();
         public string Nome;
         public DateTime DataDeNascimento;
         public string Especie;
-        public int IdTutor;
+        public Guid IdTutor;
 
 
         //Id (ex: 1800)
