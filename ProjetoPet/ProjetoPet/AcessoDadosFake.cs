@@ -15,8 +15,14 @@ namespace ProjetoPet
         // botão adicionar um novo pet a esse tutor
         // ---- o pet só pode ser criado dentro do tutor -- pet não tem mais de 1 tutor
 
-        void ObterTodosOsTutores()
+        List<Tutor> tutorLista = new List<Tutor>();
+
+
+        // estudar e dúvidas
+
+        public List<Tutor> ObterTodosOsTutores()
         {
+            return tutorLista;
 
         }
 
@@ -25,12 +31,12 @@ namespace ProjetoPet
 
         }
 
-        void AdicionarNovoTutor()
+        public void SalvarTutor(Tutor tutor)
         {
-
+            tutorLista.Add(tutor);
         }
 
-        void AdicionarNovoPet()
+        void SalvarPet()
         {
 
         }

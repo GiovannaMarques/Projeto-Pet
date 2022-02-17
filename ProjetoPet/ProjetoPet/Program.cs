@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ProjetoPet
 {
@@ -6,14 +7,67 @@ namespace ProjetoPet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bem vindo à plataforma");
+            //Console.WriteLine("Bem vindo à plataforma");
+
+            //FluxoCriarPet(tutorCriado.Id);
+
+            #region Exemplos De Lista
+            // Criar uma lista para armazenar nomes
+            List<string> listaNomes = new List<string>();
+
+            // Adicionar o nome Giovanna na Lista
+            listaNomes.Add("Giovanna");
+
+            // Adicionar o nome Matheus na Lista
+            listaNomes.Add("Matheus");
+
+            // Adicionar o nome da Duda na lista
+            listaNomes.Add("Duda");
+
+            // Acessar o primeiro nome da Lista - Giovanna.
+            string primeiroNomeDaLista = listaNomes[0];
+          //  Console.WriteLine($"{primeiroNomeDaLista}");
+
+            // Acessar o segundo nome da Lista 
+            string segundoNomeDaLista = listaNomes[1];
+         //   Console.WriteLine(segundoNomeDaLista);
+
+            // Contar o número de elementos/itens da Lista
+            int numeroDeItensNaLista = listaNomes.Count;
+
+            // Mostrar na tela todos os nomes da Lista
+            int contador = 0;
+
+            while (contador < listaNomes.Count)
+            {
+                Console.WriteLine(listaNomes[contador]);
+                contador = contador + 1;
+            }
+
+            #endregion
+
+            AcessoDadosFake dadosFake = new AcessoDadosFake();
 
             Tutor tutorCriado = FluxoCriarTutor();
+            dadosFake.SalvarTutor(tutorCriado);
 
-            FluxoCriarPet(tutorCriado.Id);
-            
+            Tutor segundoTutorCriado = FluxoCriarTutor();
+            dadosFake.SalvarTutor(segundoTutorCriado);
+
+            List<Tutor> tutoresRegistradosNaClinica = dadosFake.ObterTodosOsTutores();
+            int contadorTutor = 0;
+
+            Console.WriteLine("A seguir é mostrado a lista de Tutores Cadastrados:");
+
+            while (contadorTutor < tutoresRegistradosNaClinica.Count)
+            {
+                Console.WriteLine(tutoresRegistradosNaClinica[contadorTutor].Nome);
+                contadorTutor = contadorTutor + 1;
+            }
+
         }
-        // estudar essa parte
+
+
         static Tutor FluxoCriarTutor()
         {
             // Capturar os dados do tutor e criar o objeto tutor 
@@ -57,7 +111,6 @@ namespace ProjetoPet
         //Espécie(ex: Cão)
         //IdTutor(ex: 1555)
 
-        // estudaaaar
         static void FluxoCriarPet(Guid tutorID)
         {
             Console.WriteLine("Digite o nome do Pet");
