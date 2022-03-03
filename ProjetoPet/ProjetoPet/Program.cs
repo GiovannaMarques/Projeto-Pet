@@ -1,37 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ProjetoPet
 {
     internal class Program
     {
+        static AcessoDadosFake dadosFake;
+
         static void Main(string[] args)
         {
-            
-            AcessoDadosFake dadosFake = new AcessoDadosFake();
-
-            Tutor tutorCriado = FluxoCriarTutor();
-            dadosFake.SalvarTutor(tutorCriado);
-
-            Tutor segundoTutorCriado = FluxoCriarTutor();
-            dadosFake.SalvarTutor(segundoTutorCriado);
-
-            List<Tutor> tutoresRegistradosNaClinica = dadosFake.ObterTodosOsTutores();
-            int contadorTutor = 0;
-
-            Console.WriteLine("A seguir é mostrado a lista de Tutores Cadastrados:");
-
-            while (contadorTutor < tutoresRegistradosNaClinica.Count)
+            while (true)
             {
-                Console.WriteLine(tutoresRegistradosNaClinica[contadorTutor].Nome);
-                contadorTutor = contadorTutor + 1;
-            }
+                Console.Clear();
+                Console.WriteLine("Clínica vet - Tela principal \n");
 
+                Console.WriteLine("Selecione 1 para cadastrar um tutor");
+                Console.WriteLine("Selecione 2 para obter a lista de todos os tutores");
+
+                var respostaUsuario = Console.ReadLine();
+
+                if (respostaUsuario == "1")
+                {
+                    FluxoCriarTutor();
+                }
+                else if(respostaUsuario == "2")
+                {
+                    MostrarTodosOsTutoresNaTela();
+                }
+            }
         }
 
+        static void MostrarTodosOsTutoresNaTela()
+        {
+            // Obter os tutores cadastrados
+            // Mostrar o nome e sobrenome de cada tutor de cada tutor na tela
+            // Mostrar a frase "Pressione qualquer tecla para voltar à tela principal"
+        }
 
         static Tutor FluxoCriarTutor()
         {
+            Console.Clear();
+            Console.WriteLine("Clínica vet - Tela de cadastro de tutor");
+
             // Capturar os dados do tutor e criar o objeto tutor 
             Console.WriteLine("Preencha os dados do tutor no formulário");
 
@@ -63,7 +72,8 @@ namespace ProjetoPet
             tutor.CEP = cepTutor;
             tutor.NumeroDaCasa = numeroDaCasaInt;
 
-            //estudaaar
+            dadosFake.SalvarTutor(tutor);
+            
             return tutor;
         }
 
