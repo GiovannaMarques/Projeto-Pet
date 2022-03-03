@@ -8,6 +8,8 @@ namespace ProjetoPet
 
         static void Main(string[] args)
         {
+            dadosFake = new AcessoDadosFake();
+
             while (true)
             {
                 Console.Clear();
