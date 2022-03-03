@@ -7,45 +7,7 @@ namespace ProjetoPet
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Bem vindo à plataforma");
-
-            //FluxoCriarPet(tutorCriado.Id);
-
-            #region Exemplos De Lista
-            // Criar uma lista para armazenar nomes
-            List<string> listaNomes = new List<string>();
-
-            // Adicionar o nome Giovanna na Lista
-            listaNomes.Add("Giovanna");
-
-            // Adicionar o nome Matheus na Lista
-            listaNomes.Add("Matheus");
-
-            // Adicionar o nome da Duda na lista
-            listaNomes.Add("Duda");
-
-            // Acessar o primeiro nome da Lista - Giovanna.
-            string primeiroNomeDaLista = listaNomes[0];
-          //  Console.WriteLine($"{primeiroNomeDaLista}");
-
-            // Acessar o segundo nome da Lista 
-            string segundoNomeDaLista = listaNomes[1];
-         //   Console.WriteLine(segundoNomeDaLista);
-
-            // Contar o número de elementos/itens da Lista
-            int numeroDeItensNaLista = listaNomes.Count;
-
-            // Mostrar na tela todos os nomes da Lista
-            int contador = 0;
-
-            while (contador < listaNomes.Count)
-            {
-                Console.WriteLine(listaNomes[contador]);
-                contador = contador + 1;
-            }
-
-            #endregion
-
+            
             AcessoDadosFake dadosFake = new AcessoDadosFake();
 
             Tutor tutorCriado = FluxoCriarTutor();
