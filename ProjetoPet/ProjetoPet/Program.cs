@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ProjetoPet
 {
@@ -33,6 +34,12 @@ namespace ProjetoPet
 
         static void MostrarTodosOsTutoresNaTela()
         {
+            List<Tutor> listaTutores = dadosFake.ObterTodosOsTutores();
+
+            for (int i = 0; i < listaTutores.Count; i++)
+            {
+                Console.WriteLine(listaTutores);
+            }
             // Obter os tutores cadastrados
             // Mostrar o nome e sobrenome de cada tutor de cada tutor na tela
             // Mostrar a frase "Pressione qualquer tecla para voltar à tela principal"
